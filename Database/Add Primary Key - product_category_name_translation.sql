@@ -1,0 +1,2 @@
+ALTER TABLE product_category_name_translation
+ADD PRIMARY KEY(product_category_name);

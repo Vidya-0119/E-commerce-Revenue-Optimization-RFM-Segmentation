@@ -1,0 +1,7 @@
+INSERT INTO product_category_name_translation(
+product_category_name, product_category_name_english)
+SELECT DISTINCT products.product_category_name,products.product_category_name
+FROM product_category_name_translation RIGHT JOIN products
+ON products.product_category_name = product_category_name_translation.product_category_name
+WHERE product_category_name_translation.product_category_name IS NULL
+AND products.product_category_name IS NOT NULL;

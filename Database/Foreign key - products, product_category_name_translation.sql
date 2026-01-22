@@ -1,0 +1,4 @@
+ALTER TABLE products
+ADD CONSTRAINT product_product_category_name_translation_fkey
+FOREIGN KEY(product_category_name)
+REFERENCES product_category_name_translation (product_category_name);

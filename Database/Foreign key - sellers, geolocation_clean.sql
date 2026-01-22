@@ -1,0 +1,4 @@
+ALTER TABLE sellers
+ADD CONSTRAINT sellers_geolocation_clean_fkey
+FOREIGN KEY(seller_zip_code_prefix, seller_state)
+REFERENCES geolocation_clean(geolocation_zip_code_prefix, geolocation_state);
